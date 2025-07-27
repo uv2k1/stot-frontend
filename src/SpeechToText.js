@@ -99,7 +99,7 @@ const SpeechToText = () => {
             return;
         }
         try {
-            const response = await fetch('http://localhost:5050/api/transcriptions', {
+            const response = await fetch('https://stot-backend.vercel.app/api/transcriptions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ const SpeechToText = () => {
 
     const fetchTranscriptions = async () => {
         try {
-            const response = await fetch('http://localhost:5050/api/transcriptions');
+            const response = await fetch('https://stot-backend.vercel.app/api/transcriptions');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
